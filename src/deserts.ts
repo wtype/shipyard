@@ -1,4 +1,4 @@
-export function deserts() {
+function deserts() {
   const uniqueDeserts = new Set<string>();
   return {
     createDesert(name: string) {
@@ -7,6 +7,7 @@ export function deserts() {
     removeDesert(name: string) {
       uniqueDeserts.delete(name);
     },
-    uniqueDeserts,
+    deserts: uniqueDeserts,
   };
 }
+export default deserts();

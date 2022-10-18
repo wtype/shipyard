@@ -1,4 +1,4 @@
-export function valleys() {
+function valleys() {
   const uniqueValleys = new Set<string>();
   return {
     createValley(name: string) {
@@ -7,6 +7,7 @@ export function valleys() {
     removeValley(name: string) {
       uniqueValleys.delete(name);
     },
-    uniqueValleys,
+    valleys: uniqueValleys,
   };
 }
+export default valleys();

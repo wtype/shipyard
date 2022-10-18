@@ -1,4 +1,4 @@
-export function meadows() {
+function meadows() {
   const uniqueMeadows = new Set<string>();
   return {
     createMeadow(name: string) {
@@ -7,6 +7,7 @@ export function meadows() {
     removeMeadow(name: string) {
       uniqueMeadows.delete(name);
     },
-    uniqueMeadows,
+    meadows: uniqueMeadows,
   };
 }
+export default meadows();

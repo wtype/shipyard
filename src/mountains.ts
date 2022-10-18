@@ -1,4 +1,4 @@
-export function mountains() {
+function mountains() {
   const uniqueMountains = new Set<string>();
   return {
     createMountain(name: string) {
@@ -7,6 +7,7 @@ export function mountains() {
     removeMountain(name: string) {
       uniqueMountains.delete(name);
     },
-    uniqueMountains,
+    mountains: uniqueMountains,
   };
 }
+export default mountains();
